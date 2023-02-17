@@ -121,8 +121,8 @@ PP-TTS 默认提供基于 FastSpeech2 声学模型和 HiFiGAN 声码器的中文
 ###  2. 语音合成任务 ###
 
 ##### 数据集：
-
 常见语音合成数据集如下表所示：
+
 <img align=“center” src="/img/shujvji.jpg"/>
 
 ### 3. 模型如何使用
@@ -303,11 +303,12 @@ python train.py --model='Tacotron-2'
 ```
 
 每5000步记录一次，并存储在**logs-Tacotron**文件夹下。
-<img align=“center” src="/img/t2.png"/>
 
-<img align=“center” src="/img/0101.png"/>
+<img align=“center” src="/img/t2.png" />
 
-⚠️ 如果出现以下报错<img align=“center” src="/img/t2erroe.png"/>
+<img align=“center” src="/img/0101.png" />
+
+⚠️ 如果出现以下报错<img src="/img/t2erroe.png" />
 
 
 ==此时注意查看 tensorflow版本， 1.9限定了keras的版本范围==
