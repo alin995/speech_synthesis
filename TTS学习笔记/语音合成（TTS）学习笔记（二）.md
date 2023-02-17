@@ -214,10 +214,10 @@ sudo apt install gcc g++ libopenblas-dev liblapack-dev libatlas-base-dev libblas
 
 > apt-get install -y libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
 
-<font align="center" size=4 color="violet">出现问题的排查 </font>
+<p><font align="center" size=4 color="violet"> 出现问题的排查 </font></p>
 <img align=“center” src="/img/installerror.png"/>
 
-​           **安装环境依赖时，一个一个单独装！！**
+**安装环境依赖时，一个一个单独装！！**
 
 **|**    如果出现! <img align=“center” src="/img/install02.png"/>
 
@@ -304,7 +304,7 @@ python train.py --model='Tacotron-2'
 
 每5000步记录一次，并存储在**logs-Tacotron**文件夹下。
 
-<img align=“center” src="/img/t2.png" />
+<img align=“center” src="/img/t2.jpg" />
 
 <img align=“center” src="/img/0101.png" />
 
