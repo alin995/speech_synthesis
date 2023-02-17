@@ -57,7 +57,7 @@
 > <p>sudo apt install python 3.9</p>
 >
 > <p>python  --version</p>
-> <img src="/Users/wangwenlin/Desktop/img/pythonversion.jpg" alt="pythonversion"  />
+> <img align=“center” src="/img/pythonversion.jpg" />
 >
 > [ **安装anaconda** ](https://www.anaconda.com/products/distribution)
 >
@@ -109,8 +109,7 @@ PP-TTS 是 PaddleSpeech 自研的流式语音合成系统。在实现[前沿算�
 #### PP-TTS
 
 语音合成基本流程如下图所示：
-
-![tts](/Users/wangwenlin/Desktop/img/tts.png)
+<img src="/img/tts.png"/>
 
 PP-TTS 默认提供基于 FastSpeech2 声学模型和 HiFiGAN 声码器的中文流式语音合成系统：
 
@@ -124,8 +123,7 @@ PP-TTS 默认提供基于 FastSpeech2 声学模型和 HiFiGAN 声码器的中文
 ##### 数据集：
 
 常见语音合成数据集如下表所示：
-
-![shujvji](/Users/wangwenlin/Desktop/img/shujvji.jpg)
+<img align=“center” src="/img/shujvji.jpg"/>
 
 ### 3. 模型如何使用
 
@@ -159,26 +157,23 @@ voc='hifigan_csmsc',
 lang='mix',
 spk_id=174)
 ```
-
-![outputwav](/Users/wangwenlin/Desktop/img/outputwav.png)
+<img align=“center” src="/img/outputwav.png"/>
 
 ### 4. 模型原理
 
 ### 4.1 声学模型 FastSpeech2
+<img align=“center” src="/img/fastSpeech.png"/>
 
-![fastSpeech](/Users/wangwenlin/Desktop/img/fastSpeech.png)
 
 PaddleSpeech TTS 实现的 FastSpeech2 与论文不同的地方在于，我们使用的的是 phone 级别的 `pitch` 和 `energy`(与 FastPitch 类似)，这样的合成结果可以更加**稳定**。
-
-![fastPitch](/Users/wangwenlin/Desktop/img/fastPitch.png)
+<img align=“center” src="/img/fastPitch.png"/>
 
 ###  4.2 声码器 HiFiGAN
 
 1. 引入了多周期判别器（Multi-Period Discriminator，MPD）。HiFiGAN 同时拥有多尺度判别器（Multi-Scale Discriminator，MSD）和多周期判别器，目标就是尽可能增强 GAN 判别器甄别合成或真实音频的能力。
 
 2. 生成器中提出了多感受野融合模块。WaveNet为了增大感受野，叠加带洞卷积，逐样本点生成，音质确实很好，但是也使得模型较大，推理速度较慢。HiFiGAN 则提出了一种残差结构，交替使用带洞卷积和普通卷积增大感受野，保证合成音质的同时，提高推理速度。
-
-   ![mpd](/Users/wangwenlin/Desktop/img/mpd.png)
+<img align=“center” src="/img/mpd.png"/>
 
 <font align="center" size=4 color="violet">出现问题的排查</font>
 
@@ -220,14 +215,13 @@ sudo apt install gcc g++ libopenblas-dev liblapack-dev libatlas-base-dev libblas
 > apt-get install -y libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg libav-tools
 
 <font align="center" size=4 color="violet">出现问题的排查 </font>
-
-![installerror](/Users/wangwenlin/Desktop/img/installerror.png)
+<img align=“center” src="/img/installerror.png"/>
 
 ​           **安装环境依赖时，一个一个单独装！！**
 
-**|**    如果出现![install02](/Users/wangwenlin/Desktop/img/install02.png)
+**|**    如果出现! <img align=“center” src="/img/install02.png"/>
 
-![fix02](/Users/wangwenlin/Desktop/img/fix02.png)
+<img align=“center” src="/img/fix02.png"/>
 
 最后，您可以安装 requirements.txt. 如果你是一个 Anaconda 用户: (可以用 **pip3** 代替 **pip** 并 用**python3** 代替 **python**)
 
@@ -278,8 +272,7 @@ pip3 install keras==2.2.4
 - 如果同时对两个模型进行训练，则模型参数结构将不同。
 
 ### 3.模型架构
-
-![tacotron2](/Users/wangwenlin/Desktop/img/tacotron2.png)
+<img align=“center” src="/img/tacotron2.png"/>
 
 ### 4. 预处理 ###
 
@@ -310,12 +303,12 @@ python train.py --model='Tacotron-2'
 ```
 
 每5000步记录一次，并存储在**logs-Tacotron**文件夹下。
+<img align=“center” src="/img/t2.png"/>
 
-![t2](/Users/wangwenlin/Desktop/img/t2.jpg)
+<img align=“center” src="/img/0101.png"/>
 
-![0101](/Users/wangwenlin/Desktop/img/0101.png)
+⚠️ 如果出现以下报错<img align=“center” src="/img/t2erroe.png"/>
 
-⚠️ 如果出现以下报错![t2erroe](/Users/wangwenlin/Desktop/img/t2erroe.png)
 
 ==此时注意查看 tensorflow版本， 1.9限定了keras的版本范围==
 
@@ -340,8 +333,8 @@ logs will be stored inside **logs-Wavenet**.
 **gpu环境下需要安装驱动cuda，CUDNN。cudnn -> 基于cuda驱动的库。提前下载好驱动包**
 
 **查看本机信息选择合适版本的cuda/cudnn 版本**（下载地址：相关阅读）
+<img align=“center” src="/img/installcuda.png" />
 
-![installcuda](/Users/wangwenlin/Desktop/img/installcuda.png)
 
 ### 1. 配置项目环境   ###
 
@@ -357,7 +350,8 @@ logs will be stored inside **logs-Wavenet**.
 
 **｜**安装驱动包时，提前确定哪个是基础包哪个是补丁包，安装时需注意文件名
 
-如：![budingyuan](/Users/wangwenlin/Desktop/img/budingyuan.png)
+如：<img align=“center” src="/img/budingyuan.png"/>
+
 
 解决一：修改/添加 yum源
 
@@ -367,7 +361,7 @@ logs will be stored inside **logs-Wavenet**.
 
 ｜ pip install pyaudio
 
-如：多个yum运行![企业微信截图_ad47b091-24e6-4c11-ad1b-52f4e2ae54b9](/Users/wangwenlin/Library/Containers/com.tencent.WeWorkMac/Data/Documents/Profiles/3CC881EA0FF42D4B87B7EE4E970B9425/Caches/Images/2023-02/00effbcc15e042f8673589e3ec00e688_HD/企业微信截图_ad47b091-24e6-4c11-ad1b-52f4e2ae54b9.png)
+如：多个yum运行<img align=“center” src="/img/yumerror.png"/>
 
 解决：  kill 对应的pid
 
@@ -376,20 +370,20 @@ logs will be stored inside **logs-Wavenet**.
 同ubuntu服务器运行操作一样     python train.py --model='Tacotron-2'
 
 预处理：
+<img align=“center” src="/img/centoscpu.png"/>
 
-![centoscpu](/Users/wangwenlin/Desktop/img/centoscpu.png)
 
 cpu执行完成：
+<img align=“center” src="/img/centoscpulook.png"/>
 
-![centoscpulook](/Users/wangwenlin/Desktop/img/centoscpulook.png)
 
 gpu执行完成：
+<img align=“center” src="/img/gputimes.png"/>
 
-![gputimes](/Users/wangwenlin/Desktop/img/gputimes.png)
+<img align=“center” src="/img/gpu0101.png"/>
 
-![gpu0101](/Users/wangwenlin/Desktop/img/gpu0101.png)
+<img align=“center” src="/img/gpustep.png"/>
 
-![gpustep](/Users/wangwenlin/Desktop/img/gpustep.png)
 
 ---
 
