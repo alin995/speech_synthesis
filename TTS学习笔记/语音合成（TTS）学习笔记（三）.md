@@ -102,7 +102,9 @@ interface.launch(inbrowser=True, inline=False, validate=False, share=True)
 
 <img aligin="center" src="/img/t-v.png" />
 
+
 <img aligin="center" src="/img/owngradio.png" />
+
 
 ## 三  **gradio依赖包的版本** ##
 
