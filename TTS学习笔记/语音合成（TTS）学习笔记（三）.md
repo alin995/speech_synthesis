@@ -58,8 +58,7 @@ demo.launch(server_name="0.0.0.0")
 # To create a public link, set `share=True` in `launch()`
 ```
 
-![gradiowebUI](/Users/wangwenlin/Desktop/img/gradiowebUI.png)
-
+<img aligin="center" src="/img/gradiowebUI.png" />
 上面的代码就是简单一个webApp，功能是输入一个文本，输出一个文本。代码中关键点：
 
 - 导入包 `import gradio as gr`
@@ -99,18 +98,16 @@ interface.launch(inbrowser=True, inline=False, validate=False, share=True)
 ### 2. 本人模拟了一个输入文本转换语音的例子
 
 输入文本输出了指定的使用训练好的模型
-
-![image-20230224143126097](/Users/wangwenlin/Desktop/img/t-v.png)
-
-![image-20230224142018598](/Users/wangwenlin/Desktop/img/owngradio.png)
+<img aligin="center" src="/img/t-v.png" />
+<img aligin="center" src="/img/owngradio.png" />
 
 ## 三  **gradio依赖包的版本** ##
 
 #### 踩坑记录 ####
 
 ​	安装的gradio 是3.0版本  当前环境 tensorflow  1.9.0 ，执行时候报错 
+<img aligin="center" src="/img/error0.png" />
 
-![image-20230224151157510](/Users/wangwenlin/Desktop/img/error0.png)
 
 原来是相互依赖，需要升级numpy的版本（当前训练模型合成语音的项目环境需要numpy ==1.14.0）。于是，查一下版本不匹配为了不影响训练合成功能，进行gradio降级 => 安装gradio2.0版本，搭建webUI界面显示了，重新执行了文件， 但是出现了语音无法合成，排查许久才发现，自动把numpy升级了。针对合成和执行实现web不能同时实现的问题：
 
