@@ -59,6 +59,7 @@ demo.launch(server_name="0.0.0.0")
 ```
 
 <img aligin="center" src="/img/gradiowebUI.png" />
+
 上面的代码就是简单一个webApp，功能是输入一个文本，输出一个文本。代码中关键点：
 
 - 导入包 `import gradio as gr`
@@ -98,7 +99,9 @@ interface.launch(inbrowser=True, inline=False, validate=False, share=True)
 ### 2. 本人模拟了一个输入文本转换语音的例子
 
 输入文本输出了指定的使用训练好的模型
+
 <img aligin="center" src="/img/t-v.png" />
+
 <img aligin="center" src="/img/owngradio.png" />
 
 ## 三  **gradio依赖包的版本** ##
@@ -106,6 +109,7 @@ interface.launch(inbrowser=True, inline=False, validate=False, share=True)
 #### 踩坑记录 ####
 
 ​	安装的gradio 是3.0版本  当前环境 tensorflow  1.9.0 ，执行时候报错 
+
 <img aligin="center" src="/img/error0.png" />
 
 
