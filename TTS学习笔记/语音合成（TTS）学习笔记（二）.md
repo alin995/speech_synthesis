@@ -76,7 +76,7 @@
 >
 > ---
 >
-> **创建python沙盒⬇️ **
+> **创建python沙盒命令⬇️ **
 >
 > conda create -n urname python=3.6 tensorflow=1.10
 > conda activate urname
@@ -217,7 +217,7 @@ sudo apt install gcc g++ libopenblas-dev liblapack-dev libatlas-base-dev libblas
 <p><font align="center" size=4 color="violet"> 出现问题的排查 </font></p>
 <img align=“center” src="/img/installerror.png"/>
 
-**安装环境依赖时，一个一个单独装！！**
+**pip方式安装环境依赖时，建议单个安装模块！！**
 
 **|**    如果出现! <img align=“center” src="/img/install02.png"/>
 
@@ -245,6 +245,8 @@ pip3 install \
     keras
 
 sudo apt install python3-pyaudio
+
+** pip方式安装多个模块 **
 
 pip3 install llvmlite==0.29.0 numpy==1.14.0 numba==0.45.1 pydub==0.23.1
 pip3 install keras==2.2.4
