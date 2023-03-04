@@ -94,8 +94,8 @@ RMSE（ROOT mean squarederror）：均方根误差，均方差开根号，实质
 交叉熵损失（cross-entropy loss）：用来检验实际发生概率和预测准确率信息量的乘积
 
 简单来说，当参数大于0时，则函数值趋近于1，而当参数值小于0时，函数值趋近于0.因此逻辑回归的Hypothesis可以解释为样本x属于正类别的概率。当θ.Tx>0后，概率趋近于1，反之则趋近于0。由此得到Cost function如下：
-
 <img align=“center” src="/img/gongshi.png"/>
+
 
 ## 分类算法：
 
@@ -104,6 +104,7 @@ RMSE（ROOT mean squarederror）：均方根误差，均方差开根号，实质
 ## 常用算法
 
 <img align=“center” src="/img/table.png"/>
+
 ## 评估方法
 
 不同的算法有不同的评价方法，正确而全面的评价方法能够很好的反应算法的性能，评价一个分类器算法的好坏又包括许多项指标，首先介绍一些基础概念。
@@ -115,6 +116,7 @@ True positives(TP): 被正确地划分为正例的个数，即实际为正例且
 False positives(FP): 被错误地划分为正例的个数，即实际为负例但被分类器划分为正例的实例数；
 False negatives(FN):被错误地划分为负例的个数，即实际为正例但被分类器划分为负例的实例数；
 True negatives(TN): 被正确地划分为负例的个数，即实际为负例且被分类器划分为负例的实例数。
+
 <img align=“center” src="/img/fenleitable.png"/>
 
 
