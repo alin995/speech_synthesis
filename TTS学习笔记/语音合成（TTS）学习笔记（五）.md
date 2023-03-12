@@ -50,7 +50,7 @@ E = a m
 
 交叉验证法（cross validation）先将数据集D划分为K个大小相似的互斥子集，即：
 
-![image-20230307171857327](/Users/wangwenlin/Desktop/img/gs1.png)
+<img align=“center” src="/img/gs1.png"/>
 
 每个子集都是通过分层采样得到，以尽可能保持数据分布的一致性；即从D中通过层次采样得到。然后每次使用k-1个子集的并集做训练集，余下的子集作为测试集，这样一共可以得到k组训练集/测试集，从而可以进行k次训练和测试，最终返回k次训练的均值。
 
@@ -60,7 +60,8 @@ E = a m
 
   交叉验证法评估结果的稳定性和保真性在很大程度上取决于 k 值，为了强调这一点，我们又称“k折交叉验证” k 的最常用取值是10，也有用5,20的。来看一张图把，助于理解。
 
-![image-20230307171955962](/Users/wangwenlin/Desktop/img/gs2.png)
+
+<img align=“center” src="/img/gs2.png"/>
 
  如果我们数据集D包含m个样本，又 k = m，就得到了交叉验证法的一个特例：留一法（Leave-One-Out，简称LOO）
 
@@ -73,7 +74,10 @@ E = a m
 
 > 直接以自助采样为基础。给定 m 个样本的数据集 D,我们对其进行采样产生数据集 D’：每次随机从D中选取一个样本，将其拷贝放入D’，然后再将样本放回数据集D中，使得该样本在下次采样中仍可能被采到；重复 m 次，就收集到了 m 个数据集 D’，这就是自助采样的结果。D中有一部分数据会多次出现，而另一部分数据则不会出现。我们可以做一个简单的估计。样本在 m 次采样中始终不会采到的概率是 (1-1/m)的m次方，取极限：
 >
-> ![image-20230307172426784](/Users/wangwenlin/Desktop/img/gs3.png)
+
+
+<img align=“center” src="/img/gs3.png"/>
+
 
 通过自助采样，初始数据集D中有36.8%的样本未出现在采集数据集 D’ 中。我们将D’用来训练，D \ D’用作测试集。
 
@@ -95,11 +99,13 @@ E = a m
 
 回归任务最常用的性能量度是“均方误差”
 
-![image-20230307173401089](/Users/wangwenlin/Desktop/img/gs4.png)
+
+<img align=“center” src="/img/gs4.png"/>
 
 对于数据分布 D 和概率密度函数 p ( ⋅ ) p(·)p(⋅),均方误差可描述为：
 
-![image-20230307173440499](/Users/wangwenlin/Desktop/img/gs5.png)
+
+<img align=“center” src="/img/gs5.png"/>
 
 这里是常用的性能量度。
 
