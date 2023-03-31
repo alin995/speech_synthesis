@@ -153,6 +153,89 @@ def remove_alphabets(text):
         text = text.upper()
     if args.to_lower:
         text = text.lower()
+        
+## export  const  verbalizeCardinal = (num)  => {
+    // 将基数词转换为中文汉字表示
+    let result = '';
+    for (let digit of String(num)) {
+        result += CARDINALS[digit];
+    }
+    return result;
+ }
+
+## export  const replaceDate = (match) =>  {
+    // 将日期字符串中的数字转换为中文汉字表示
+    const year = match[1];
+    const month = match[3];
+    const day = match[5];
+    let result = '';
+    if (year) {
+        result += `${verbalizeDigit(year)}年`;
+    }
+    if (month) {
+        result += `${verbalizeCardinal(month)}月`;
+    }
+    if (day) {
+        result += `${verbalizeCardinal(day)}${match[9]}`;
+    }
+    return result;
+    
+  ## export const replaceDate2 = (match)  => {
+    // 将日期字符串中的数字转换为中文汉字表示
+    const year = match[1];
+    const month = match[3];
+    const day = match[4];
+    let result = '';
+    if (year) {
+        result += `${verbalizeDigit(year)}年`;
+    }
+    if (month) {
+        result += `${verbalizeCardinal(month)}月`;
+    }
+    if (day) {
+        result += `${verbalizeCardinal(day)}日`;
+    }
+    return result;
+## export  const replaceTime = (match)  => {
+    const isRange = match[6] !== '-';
+    const hour = parseInt(match[1]);
+    const minute = parseInt(match[2]);
+    const second = match[4] ? parseInt(match[4]) : 0;
+    const hour2 = isRange ? parseInt(match[6]) : null;
+    const minute2 = isRange ? parseInt(match[7]) : null;
+    const second2 = isRange && match[9] ? parseInt(match[9]) : null;
+
+    let result = `${num2str(hour)}点`;
+    if (minute.toString().replace(/^0+/, '') !== '') {
+        if (minute === 30) {
+            result += '半';
+        } else {
+            result += `${_time_num2str(minute)}分`;
+        }
+    }
+    if (second.toString().replace(/^0+/, '') !== '') {
+        result += `${_time_num2str(second)}秒`;
+    }
+
+    if (isRange) {
+        result += '至';
+        result += `${num2str(hour2)}点`;
+        if (minute2.toString().replace(/^0+/, '') !== '') {
+            if (minute2 === 30) {
+                result += '半';
+            } else {
+                result += `${_time_num2str(minute2)}分`;
+            }
+        }
+        if (second2.toString().replace(/^0+/, '') !== '') {
+            result += `${_time_num2str(second2)}秒`;
+        }
+    }
+
+    return result;
+}
+
+
 
 
 ```
