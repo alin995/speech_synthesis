@@ -65,7 +65,9 @@ zh_qa(QA_input)
 2. 将处理好的输入送入模型；
 3. 对模型的输出进行后处理 (postprocessing)，将其转换为人类方便阅读的格式。
 
-![image-20230419155151267](/Users/wangwenlin/Desktop/img/pipeline.png)
+
+<img align=“center” src="/img/pipeline.png"/>
+
 
 ### 使用分词器进行预处理
 
@@ -118,7 +120,7 @@ model = AutoModel.from_pretrained(checkpoint)
 
 其实前面我们举例的所有 pipelines 都具有类似的模型结构，只是模型的最后一部分会使用不同的 head 以完成对应的任务。
 
-![image-20230419155717806](/Users/wangwenlin/Desktop/img/modules.png)
+<img align=“center” src="/img/modules.png"/>
 
 Transformer 模块的输出是一个维度为 (Batch size, Sequence length, Hidden size) 的三维张量，其中 Batch size 表示每次输入的样本（文本序列）数量，即每次输入多少个句子，上例中为 2；Sequence length 表示文本序列的长度，即每个句子被分为多少个 token，上例中为 16；Hidden size 表示每一个 token 经过模型编码后的输出向量（语义表示）的维度。
 
@@ -317,10 +319,6 @@ transformers 预训练的任务包括语言建模、掩码语言建模、下一�
 5. 图像生成预训练：例如DALL-E、CLIP等，该任务的目标是让模型能够将自然语言描述转化为相应的图像或视频，通常使用生成对抗网络（GAN）等技术。
 
 ------
-
-AutoModelForQuestionAnswering  自动问答/阅读理解
-AutoModelForTokenClassification   文本分类
-AutoModelForSeq2SeqLM  文本生成摘要
 
 ### AutoModel
 
