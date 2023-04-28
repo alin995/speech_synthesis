@@ -10,7 +10,8 @@
 
 这是一般的神经网络应该有的结构： 
 
-![sjnet](/Users/wangwenlin/Desktop/img/sjnet.png)
+<img align=“center” src="/img/sjnet.png"/>
+
 
 既然我们已经有了人工神经网络和卷积神经网络，为什么还要循环神经网络？ 
 原因很简单，无论是卷积神经网络，还是人工神经网络，他们的前提假设都是：元素之间是相互独立的，输入与输出也是独立的，比如猫和狗。 
@@ -32,11 +33,12 @@ RNN是一个序列到序列的模型，假设xt−1,xt,xt+1xt−1,xt,xt+1是一�
 >
 >  方式一：可只在其中的某一个序列进行计算，比如序列第一个进行输入计算：
 >
->![image-20230427152311002](/Users/wangwenlin/Desktop/img/jianmo01.png)
+<img align=“center” src="/img/jianmo01.png"/>
 >
 >  方式二：把输入信息X作为每个阶段的输入：
 >
->![image-20230427152728873](/Users/wangwenlin/Desktop/img/jm02.png)
+
+<img align=“center” src="/img/jm02.png"/>
 >
 >应用场景：
 >
@@ -48,7 +50,8 @@ RNN是一个序列到序列的模型，假设xt−1,xt,xt+1xt−1,xt,xt+1是一�
 >
 >输入是一个序列，输出是一个单独的值，此时通常在最后的一个序列上进行输出变换:
 >
->![image-20230427152927645](/Users/wangwenlin/Desktop/img/jm3.png)
+
+<img align=“center” src="/img/jm3.png"/>
 >
 >**应用场景：**
 >
@@ -60,11 +63,12 @@ RNN是一个序列到序列的模型，假设xt−1,xt,xt+1xt−1,xt,xt+1是一�
 >
 >**步骤一**：将输入数据编码成一个上下文向量c，这部分称为Encoder，得到c有多种方式，最简单的方法就是把Encoder的最后一个隐状态赋值给c，还可以对最后的隐状态做一个变换得到c，也可以对所有的隐状态做变换。
 >
->![image-20230427153332445](/Users/wangwenlin/Desktop/img/jm03.png)
+<img align=“center” src="/img/jm03.png"/>
 >
 >**步骤二**：用另一个RNN网络（我们将其称为Decoder）对其进行编码，方法一是将步骤一中的c作为初始状态输入到Decoder，示意图如下所示：
 >
->![image-20230427153512328](/Users/wangwenlin/Desktop/img/jm04.png)
+
+<img align=“center” src="/img/jm04.png"/>
 
 
 
@@ -78,7 +82,7 @@ RNN是一个序列到序列的模型，假设xt−1,xt,xt+1xt−1,xt,xt+1是一�
 **Encoder-Decoder框架**
 目前大多数注意力模型附着在Encoder-Decoder框架下，当然，其实注意力模型可以看作一种通用的思想，本身并不依赖于特定框架。
 
-![image-20230428135153324](/Users/wangwenlin/Desktop/img/encode-decoder.png)
+<img align=“center” src="/img/encode-decoder.png"/>
 
 文本处理领域的Encoder-Decoder框架可以这么直观地去理解：可以把它看作适合处理由一个句子（或篇章）生成另外一个句子（或篇章）的通用处理模型。对于句子对<Source,Target>，我们的目标是给定输入句子Source，期待通过Encoder-Decoder框架来生成目标句子Target。Source和Target可以是同一种语言，也可以是两种不同的语言。
 
@@ -114,11 +118,13 @@ Decoder的 任务是根据句子Source的中间语义表示C和之前已经生�
 
 将Source中的构成元素想象成是由一系列的<Key,Value>数据对构成，此时给定Target中的某个元素Query，通过计算Query和各个Key的相似性或者相关性，得到每个Key对应Value的权重系数，然后对Value进行加权求和，即得到了最终的Attention数值。所以本质上Attention机制是对Source中元素的Value值进行加权求和，而Query和Key用来计算对应Value的权重系数
 
-![image-20230428134404575](/Users/wangwenlin/Desktop/img/attenall.png)
+
+<img align=“center” src="/img/attenall.png"/>
 
 ​	对于具体的计算过程，可以大致抽象为以下两个过程：一是根据Q和K计算权重系数，而是根据权重系数对V进行加权求和。第一个过程又可以分为两个阶段，一是根据Q和K计算两者相似性，而是对第一阶段的求值进行归一化处理。该过程可以归纳为下图：
 
-![image-20230427161119026](/Users/wangwenlin/Desktop/img/attention.png)
+
+<img align=“center” src="/img/attention.png"/>
 
 自注意
 由上文可知，Attention机制发生在Target的元素Query和Source中的所有元素之间。而自注意（self-attention）顾名思义，指的不是Target和Source之间的Attention机制，而是Source内部元素之间或者Target内部元素之间发生的Attention机制。具体计算过程发生了较小的变化。	
