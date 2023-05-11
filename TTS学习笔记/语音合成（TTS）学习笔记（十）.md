@@ -31,7 +31,9 @@ Stable Diffusion是一个由多个组件和模型组成的系统，而非单一�
 
 图像信息创建器完全在图像信息空间（或潜空间）中运行，这一特性使得它比其他在像素空间工作的Diffusion模型运行得更快；从技术上来看，该组件由一个UNet神经网络和一个调度（scheduling）算法组成。扩散（diffusion）这个词描述了在该组件内部运行期间发生的事情，即对信息进行一步步地处理，并最终由下一个组件（图像解码器）生成高质量的图像。
 
-**2. 图像解码器**图像解码器根据从图像信息创建器中获取的信息画出一幅画，整个过程只运行一次即可生成最终的像素图像。![image-20230510162324488](/Users/wangwenlin/Desktop/img/three.png)
+**2. 图像解码器**图像解码器根据从图像信息创建器中获取的信息画出一幅画，整个过程只运行一次即可生成最终的像素图像。
+
+<img aligin="center" src="/img/three.png" />
 
 Stable Diffusion总共包含三个主要的组件，其中每个组件都拥有一个独立的神经网络：
 
@@ -47,7 +49,7 @@ Stable Diffusion总共包含三个主要的组件，其中每个组件都拥有�
 
 ​	Stable Diffusion其实是Diffusion的改进版本，主要是为了解决Diffusion的速度问题。那么Stable Diffusion是如何根据文字得出图片的呢？下图是Stable Diffusion生成图片的具体过程：
 
-![image-20230510102145741](/Users/wangwenlin/Desktop/img/stablediffusion.png)
+<img aligin="center" src="/img/stablediffusion.png" />
 
 可以看到，对于输入的文字（图中的“An astronout riding a horse”）会经过一个CLIP模型转化为text embedding，然后和初始图像（初始化使用随机高斯噪声Gaussian Noise）一起输入去噪模块（也就是图中Text conditioned latent U-Net），最后输出 512×512 大小的图片。这里面Text conditioned latent U-net**，翻译过来就是**文本条件隐U-net网络**，其实是**通过对U-Net引入多头Attention机制，使得输入文本和图像相关联**。
 
@@ -59,7 +61,7 @@ Stable Diffusion总共包含三个主要的组件，其中每个组件都拥有�
 
 Stable Diffusion原来的名字叫“**Latent Diffusion Model**”（**LDM**），很明显就是扩散过程发生隐空间中（latent space），其实就是对图片做了压缩，这也是Stable Diffusion比Diffusion速度快的原因。
 
-![image-20230510111042330](/Users/wangwenlin/Desktop/img/autocoder.png)
+<img aligin="center" src="/img/autocoder.png" />
 
 Stable Diffusion会先训练一个自编码器，来学习将图像压缩成低维表示。
 
@@ -95,11 +97,11 @@ Stable Diffusion会先训练一个自编码器，来学习将图像压缩成低�
 
 > 注：提示词（Prompt）越多，AI 绘图结果会更加精准，另外，目前中文提示词的效果不好，还得使用英文提示词。
 
-![image-20230510165205942](/Users/wangwenlin/Desktop/img/horse.png)
+<img aligin="center" src="/img/horse.png" />
 
 他提供的模型还包含了一些可用的高级选项来改变生成的图像的质量，如下图所示:
 
-![img](/Users/wangwenlin/Desktop/img/useimg.png)
+<img aligin="center" src="/img/useimg.png" />
 
 **images**:该选项控制的生成图像数量最多为4个。
 
