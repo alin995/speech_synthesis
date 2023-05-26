@@ -420,7 +420,7 @@ curl -L -O https://github.com/towhee-io/examples/releases/download/data/pet_smal
 unzip -q -o pet_small.zip
 ```
 
-以上主要是对归一化的简单介绍，也整理了一部分常用的规则。
+以上主要介绍了Milvus的以文搜图
 
 ---
 ## 相关阅读
