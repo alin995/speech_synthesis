@@ -419,8 +419,8 @@ conda install -c pytorch faiss-cpu
 curl -L -O https://github.com/towhee-io/examples/releases/download/data/pet_small.zip
 unzip -q -o pet_small.zip
 ```
-
-以上主要介绍了Milvus的以文搜图
+---
+以上主要介绍了Milvus的以文搜图。
 
 ---
 ## 相关阅读
