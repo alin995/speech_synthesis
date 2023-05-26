@@ -12,7 +12,8 @@
 >
 >  该模型基于OpenAI 收集到的 4 亿对图像文本对进行训练，分别将文本和图像进行编码，之后使用 metric learning 进行权重，其目标是将图像与文本的相似性提高，大致如下图所示。具体内容不在本文赘述。
 >
->  ![clip](/Users/wangwenlin/Desktop/img/clip.png)
+> 
+>  <img align=“center” src="/img/clip.png"/>
 >
 >  这个模型包含3步：
 >
@@ -122,7 +123,7 @@ encode_image和encode_text分别负责产出图像和文本特征，随后完成
 > sudo rm -rf  volumes
 > ```
 >
-> ![image-20230526153200432](/Users/wangwenlin/Desktop/img/image-docker-milvus.png)
+> <img align=“center” src="/img/image-docker-milvus.png"/>
 
 # Milvus
 
@@ -160,7 +161,8 @@ encode_image和encode_text分别负责产出图像和文本特征，随后完成
 
 **相似性搜索引擎的工作原理**是将输入的对象与数据库中的对象进行比较，找出与输入最相似的对象。索引是有效组织数据的过程，极大地加速了对大型数据集的查询，在相似性搜索的实现中起着重要作用。对一个大规模向量数据集创建索引后，查询可以被路由到最有可能包含与输入查询相似的向量的集群或数据子集。在实践中，这意味着要牺牲一定程度的准确性来加快对真正的大规模向量数据集的查询。
 
-![image-20230526154905937](/Users/wangwenlin/Desktop/img/milvus.png)
+
+<img align=“center” src="/img/milvus.png"/>
 
 以文搜图的整体流程如上图所示，图片来自[链接](https://github.com/milvus-io/bootcamp/blob/master/solutions/image/text_image_search/workflow.png)：
 
@@ -409,7 +411,7 @@ conda install -c pytorch faiss-cpu
 
 准备图片库数据
 
-![image-20230526161750676](/Users/wangwenlin/Desktop/img/clipimg.png)
+<img align=“center” src="/img/clipimg.png"/>
 
 我们选取 ImageNet 数据集的子集作为本文所使用的 “小型宠物图片库”。首先，下载数据集并解压：
 
