@@ -18,7 +18,7 @@
 
 学习率需要和训练周期，batch size 大小以及优化方法联系在一起考虑。
 
-![image-20230616111344184](/Users/wangwenlin/Desktop/img/learning.png)
+<img aligin="center" src="/img/learning.png" />
 
 
 
