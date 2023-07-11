@@ -52,6 +52,35 @@ UMAP提高了速度并更好地保存了数据的全局结构。UMAP 的核心�
 
 
 
+---
+
+UMAP的使用：
+
+```python
+import umap
+from sklearn.datasets import load_digits
+digits = load_digits()
+embedding = umap.UMAP(n_neighbors=5,
+	min_dist=0.3,
+	metric='correlation').fit_transform(digits.data)
+umap.plot.points(mapper, labels=digits.target)
+```
+
+UMAP可以设置的主要参数如下：
+
+两个最常用的参数：n_neighbors 和 min_dist，它们有效地用于控制最终降维结果中局部和全局结构之间的平衡。
+
+最重要的参数是n_neighbors，用于构造初始高维图的近似最近邻的数量。它有效地控制UMAP如何平衡局部结构与全局结构 ：较小的值将通过限制在分析高维数据时考虑的相邻点的数量来推动UMAP更多地关注局部结构，而较大的值将推动UMAP代表全局结构，丢失详细的局部结构。一般来说，这个参数应该经常在 5 到 50 的范围内，选择 10 到 15 是一个合理的默认值。
+
+我们将研究的第二个参数是 min_dist，即低维空间中点之间的最小距离，紧密程度。此参数控制UMAP将点聚集在一起的紧密程度，较低的值会导致嵌入更紧密，更准确地针对局部结构进行优化。较大的 min_dist值将使UMAP将点更松散地打包在一起，确保嵌入点分布更均匀，而是专注于保留广泛的拓扑结构。合理的值在 0.001 到 0.5 的范围内，0.1 是合理的默认值。
+
+下面的可视化，探索了UMAP参数对 3D 数据的 2D 投影的影响。通过更改 n_neighbors和min_dist参数，您可以探索它们对生成投影的影响。
+![image-20230711145823964](/Users/wangwenlin/Desktop/img/UMAP.png)
+
+metric：这决定了用于测量输入空间中距离的度量的选择。已经编码了各种各样的度量标准，并且可以传递用户定义的函数，只要它已经通过 numba 进行了 JITd。
+
+---
+
 ##  UMAP常见的应用领域：
 
 **数据可视化**
