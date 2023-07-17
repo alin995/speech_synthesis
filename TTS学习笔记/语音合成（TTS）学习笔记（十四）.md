@@ -114,7 +114,7 @@ metric：这决定了用于测量输入空间中距离的度量的选择。已�
 
 ## 相关资源
 
-> [参考文章](https://huaweicloud.csdn.net/63807f80dacf622b8df8903c.html?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~activity-6-121302082-blog-124400062.235^v38^pc_relevant_anti_t3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~activity-6-121302082-blog-124400062.235^v38^pc_relevant_anti_t3&utm_relevant_index=10)
+>**参考文章** [文章链接](https://huaweicloud.csdn.net/63807f80dacf622b8df8903c.html?spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~activity-6-121302082-blog-124400062.235^v38^pc_relevant_anti_t3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~activity-6-121302082-blog-124400062.235^v38^pc_relevant_anti_t3&utm_relevant_index=10)
 >
 > **Github地址**：[vocab-coverage](https://github.com/twang2218/vocab-coverage)
 
