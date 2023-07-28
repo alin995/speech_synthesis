@@ -24,19 +24,20 @@
 
 4. Encoder 部分用 BERT 进行初始化，引入更多的文本信息，提升合成韵律。
 
-   ![image-20230728143023404](/Users/wangwenlin/Desktop/img/01-ecoder.png)
+<img aligin="center" src="/img/01-ecoder.png" />
 
-![image-20230728143246585](/Users/wangwenlin/Desktop/img/02-speaker.png)
+<img aligin="center" src="/img/02-speaker.png" />
+
 
 针对显式韵律建模的问题，还有一种高表现力的**隐式韵律建模声学模型（ProsoSpeech）**，它采用量化隐藏韵律矢量（latent prosody vectors, LPV）来表示韵律，然后通过预训练模型来对韵律进行建模，预训练期间采用了大量低质量的语音识别数据。
 
-![image-20230728143426594](/Users/wangwenlin/Desktop/img/03-lpv.png)
+<img aligin="center" src="/img/03-lpv.png" />
 
 ### No.2 情感语音合成 Emotional TTS 
 
 情感语音合成指的是给定同一句话，发音人可以合成**不同情感**的语音，例如，开心、悲伤、兴奋和激动等。数据驱动是最直接也是最有效的方式，在 speaker embedding 基础上，我们加入 emotion embedding 对情感进行向量表示。同时，我们还引入细粒度控制能力，通过对**停顿、时长、基频和能量**的细粒度控制，使得合成的情感声音更具表现力。
 
-![image-20230728143513851](/Users/wangwenlin/Desktop/img/05-emtts.png)
+<img aligin="center" src="/img/05-emtts.png" />
 
 ### No.3 高清语音合成 HiFi-TTS 
 
@@ -61,17 +62,9 @@
 1. 利用判别器（D）来指导声码器 (即生成器G) 的训练；2. 基于 MSD 和 MPD 建模语音中信号的平稳特性和周期特性，相比于 CE loss，能够达到对声音更好的还原效果；
 
 3. 对生成器和判别器的结构进行相应改造，使其在48k采样率下有更稳定的合成效果。
-
-   ![image-20230728143640883](/Users/wangwenlin/Desktop/img/06-hifi.png)
-
----
-
-
+   <img aligin="center" src="/img/06-hifi.png" />
 
 ---
-
-
-
 
 
 ---
