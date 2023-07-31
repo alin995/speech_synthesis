@@ -2,7 +2,7 @@
 
 ---
 
-## 摩院第五代语音合成技术——基于韵律建模的 SAM-BERT、情感语音合成 Emotion TTS 和高清语音合成 HiFi-TTS 的 Expressive-TTS。
+## 达摩院第五代语音合成技术——基于韵律建模的 SAM-BERT、情感语音合成 Emotion TTS 和高清语音合成 HiFi-TTS 的 Expressive-TTS。
 
 
 
