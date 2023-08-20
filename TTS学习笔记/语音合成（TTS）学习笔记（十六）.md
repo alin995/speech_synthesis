@@ -81,7 +81,7 @@ pip install -r requirements.txt
 
 二、中文插件
 1.安装插件
-stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Extensions => availabel => 把hide Extensions with tags下面的几个功能按键取消 => search 直接搜索zh_CN localization 找到zh_CN localization插件，直接点击右边的install安装即可 ![image-20230818143855230](/Users/wangwenlin/Desktop/img/loadchinese.png)
+stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Extensions => availabel => 把hide Extensions with tags下面的几个功能按键取消 => search 直接搜索zh_CN localization 找到zh_CN localization插件，直接点击右边的install安装即可 <img aligin="center" src="/img/loadchinese.png" />
 
 点击 extensions >> installed,查看我们是否成功的安装了插件，选择我们刚刚下载的的stable-diffusion-webui-localization-zh_CN汉化插件，点击apply and restart UI,这里我们就成功安装了汉化插件。
 
