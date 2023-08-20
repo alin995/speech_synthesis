@@ -12,7 +12,7 @@
 
 |      |                             合成                             |                input image                 |
 | :--: | :----------------------------------------------------------: | :----------------------------------------: |
-|      | <video  src="/img/my.mp4" type="video/mp4"> </video> | <img src='/img/Wwl.png' width='380'> |
+|      | <video  src='/img/my.mp4' type="video/mp4"> </video> | <img src='/img/Wwl.png' width='380'> |
 
 
 
