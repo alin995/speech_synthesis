@@ -1,7 +1,19 @@
 # 语音合成学习（十五）学习笔记
 
 ---
-## 如何利用sadtalker生成ai alin
+
+# 如何利用sadtalker生成ai alin
+
+## 🔥 Highlight
+
+- 🔥 The extension of the [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) is online. Checkout more details [here](docs/webui_extension.md).
+
+- 🔥 `full image mode` is online! checkout [here](https://github.com/Winfredy/SadTalker#full-bodyimage-generation) for more details.
+
+|      |                             合成                             |                input image                 |
+| :--: | :----------------------------------------------------------: | :----------------------------------------: |
+|      | <video  src="https://github.com/alin995/speech_synthesis/blob/main/img/my.mp4" type="video/mp4"> </video> | <img src='/img/image-Wwl.png' width='380'> |
+
 
 
 #### **简介： 在这篇文章中，我们将探讨如何利用虚构的工具"SADTalker"和"Stable Diffusion WebUI"来生成一个名为"Alin"的AI视频。将通过一系列步骤，从生成语音内容到在Web界面上展示视频，展示这个过程。**
@@ -30,6 +42,7 @@
 
 SadTalker的安装及使用方法：
 SadTalker主页：https://github.com/Winfredy/SadTalker 
+
 一 SadTalker的安装
 
 ### Linux:
@@ -60,13 +73,56 @@ pip install -r requirements.txt
 
 在webui 下载SadTalker
 
-图片。。。。。
+![image-20230818164126903](/Users/wangwenlin/Desktop/img/searchhttp.png)
+
+
+
+二、中文插件
+1.安装插件
+stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Extensions => availabel => 把hide Extensions with tags下面的几个功能按键取消 => search 直接搜索zh_CN localization 找到zh_CN localization插件，直接点击右边的install安装即可 ![image-20230818143855230](/Users/wangwenlin/Desktop/img/loadchinese.png)
+
+点击 extensions >> installed,查看我们是否成功的安装了插件，选择我们刚刚下载的的stable-diffusion-webui-localization-zh_CN汉化插件，点击apply and restart UI,这里我们就成功安装了汉化插件。
+
+![image-20230818145116845](/Users/wangwenlin/Desktop/img/anzhuang.png)
+
+2.设置插件
+我们需要选择setting>>user interface>>localization，选择zh_CN
+
+点击apply settings即可，这里由于汉化设置需要重启UI界面，我们可以直接点击reload UI界面
+
+![image-20230818145314195](/Users/wangwenlin/Desktop/img/setting.png)
+
+重启后，汉化完成了！！！
 
 
 
 
 
-4. 基于自回归的声码器，性能差。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+在进行高清语音合成探索之前，综合性能、效果和稳定性，在8k和16k的场景下，采用 LPCNet 作为神经网络声码器。在当时，考虑直接在 LPCNet 上合成48k的声音，但是通过论文调研和一些初步的实验发现，LPCNet 存在比较大的局限性：
+
+1. 基于线性预测系数（Linear Prediction Coefficient, LPC）假设，推广能力不足；
+
+2. 基于逐点的交叉熵（Cross Entropy, CE）损失函数，在非语音部分不合理；
+
+3. 基于自回归的声码器，性能差。
 
 所以，参考学术界的研究进展采用了一种基于 GAN 的框架，它主要有三个特点：
 
@@ -78,5 +134,7 @@ pip install -r requirements.txt
 
 ## 相关资源
 
-> [语音合成-中文-kantts-公开数据集](https://modelscope.cn/datasets/speech_tts/speech_kantts_opendata/summary)
+> [SadTalker git地址](https://github.com/Winfredy/SadTalker) 
+>
+> [SadTalker官网](https://github.com/OpenTalker/SadTalker/blob/main/docs/webui_extension.md)
 
