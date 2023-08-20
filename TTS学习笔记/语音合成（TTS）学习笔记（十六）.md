@@ -51,10 +51,13 @@ SadTalker主页：https://github.com/Winfredy/SadTalker
 
 1. Installing [anaconda](https://www.anaconda.com/), python and git.
 2. Creating the env and install the requirements.
+3. 点击 [GFPGANv1.4](https://link.csdn.net/?target=https%3A%2F%2Fgithub.com%2FTencentARC%2FGFPGAN%2Freleases%2Fdownload%2Fv1.3.0%2FGFPGANv1.4.pth) 即可下载，将下载好的模型放到项目中
 
 ```python
 >git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+
 >执行webui.sh
+
 git clone https://github.com/Winfredy/SadTalker.git
 
 cd SadTalker 
