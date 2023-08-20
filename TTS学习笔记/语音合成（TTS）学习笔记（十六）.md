@@ -6,9 +6,9 @@
 
 ## 🔥 Highlight
 
-- 🔥 The extension of the [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) is online. Checkout more details [here](docs/webui_extension.md).
+- 🔥 The extension of the [stable-diffusion-webui] 
 
-- 🔥 `full image mode` is online! checkout [here](https://github.com/Winfredy/SadTalker#full-bodyimage-generation) for more details.
+- 🔥 `SADTalker` 
 
 |      |                             合成                             |                input image                 |
 | :--: | :----------------------------------------------------------: | :----------------------------------------: |
