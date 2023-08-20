@@ -12,7 +12,7 @@
 
 |      |                             合成                             |                input image                 |
 | :--: | :----------------------------------------------------------: | :----------------------------------------: |
-|      | <video  src="https://github.com/alin995/speech_synthesis/assets/74090594/a6be9680-2eec-4855-843e-300288e5695e" type="video/mp4"> </video> | <img src='/img/Wwl.png' width='380'> |
+|      | <video  src="https://github.com/alin995/speech_synthesis/assets/74090594/c33a9dcd-46a5-4fb4-9d7c-d8092665f4f5" type="video/mp4"> </video> | <img src='/img/Wwl.png' width='380'> |
 
 
 
