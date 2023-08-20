@@ -96,9 +96,8 @@ stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Ext
 
 重启后，汉化完成了！！！
 
-
-
-
+通过WEBui实现生成
+<img aligin="center" src="/img/webui.png" />
 
 
 
