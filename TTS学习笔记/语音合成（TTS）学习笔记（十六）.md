@@ -103,37 +103,6 @@ stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Ext
 <img aligin="center" src="/img/webui.png" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-在进行高清语音合成探索之前，综合性能、效果和稳定性，在8k和16k的场景下，采用 LPCNet 作为神经网络声码器。在当时，考虑直接在 LPCNet 上合成48k的声音，但是通过论文调研和一些初步的实验发现，LPCNet 存在比较大的局限性：
-
-1. 基于线性预测系数（Linear Prediction Coefficient, LPC）假设，推广能力不足；
-
-2. 基于逐点的交叉熵（Cross Entropy, CE）损失函数，在非语音部分不合理；
-
-3. 基于自回归的声码器，性能差。
-
-所以，参考学术界的研究进展采用了一种基于 GAN 的框架，它主要有三个特点：
-
-1. 利用判别器（D）来指导声码器 (即生成器G) 的训练；2. 基于 MSD 和 MPD 建模语音中信号的平稳特性和周期特性，相比于 CE loss，能够达到对声音更好的还原效果；
-
-2. **本文主要介绍了摩院第五代语音合成技术——基于韵律建模的 SAM-BERT、情感语音合成 Emotion TTS 和高清语音合成 HiFi-TTS 的 Expressive-TTS。
-
 ---
 
 ## 相关资源
