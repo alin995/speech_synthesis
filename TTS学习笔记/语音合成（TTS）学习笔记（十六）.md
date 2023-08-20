@@ -1,4 +1,4 @@
-![image](https://github.com/alin995/speech_synthesis/assets/74090594/a8cd9960-fac1-437a-ba24-2648a386cce1)# 语音合成学习（十五）学习笔记
+# 语音合成学习（十五）学习笔记
 
 ---
 
@@ -102,7 +102,7 @@ stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Ext
 通过Webui实现生成
 <img aligin="center" src="/img/webui.png" />
 
-<img aligin="center" src="/img/webui.png" />
+<img aligin="center" src="/img/webui.jpg" />
 启动界面可以大致分为4个区域【模型】【功能】【参数】【出图】四个区域
 
 1. 模型区域：模型区域用于切换我们需要的模型，模型下载后放置相对路径为/modes/Stable-diffusion目录里面，ckpt、pt等模型文件请放置到上面的路径，模型区域的刷新箭头刷新后可以进行选择。
