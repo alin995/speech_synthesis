@@ -4,28 +4,69 @@
 ## 如何利用sadtalker生成ai alin
 
 
+#### **简介： 在这篇文章中，我们将探讨如何利用虚构的工具"SADTalker"和"Stable Diffusion WebUI"来生成一个名为"Alin"的AI视频。将通过一系列步骤，从生成语音内容到在Web界面上展示视频，展示这个过程。**
 
-### No.1 基于韵律建模的 SAM-BERT 
+>**步骤：**
+>介绍SADTalker和Stable Diffusion WebUI：我们可以将它们视为一种语音合成工具和一个Web界面，用于将声音和图像结合成一个完整的视频。
+>
+>**准备文本脚本：** 首先，我们需要准备一个文本脚本，其中包含"Alin"角色所需说的内容。这可能包括问候、自我介绍或其他适合的内容。
+>
+>**生成语音内容：** 使用SADTalker插件工具，将文本脚本转换成"Alin"角色的语音内容。这个工具可能有一个用户友好的界面，让你选择语音风格、语速等参数。
+>
+>**准备视频素材：** 选择一个适合的视频背景或场景，与"Alin"角色的语音内容相匹配。这可以是一个动画、实景背景或其他视觉元素。
+>
+>**合成视频：** 将生成的语音内容与选定的视频素材进行合成。使用"Stable Diffusion WebUI"可以帮助你在一个互动的Web界面中完成这个任务。你可以将语音和视频组合成一个完整的演示视频。
+>
+>**互动Web界面：** 使用"Stable Diffusion WebUI"，你可以在一个Web界面上展示生成的视频。这个界面可能允许用户与视频进行互动，如播放、暂停、调整音量等。
+>
+>**导出和分享：** 在合成和展示完成后，你可以导出最终的视频文件，以及一个可以在Web浏览器中访问的链接，让其他人欣赏你创作的AI视频。
 
-近几年，语音合成技术发展迅速，虽然合成语音的效果也在逐步提升，但是合成语音在韵律（一般指的是音调起伏、能量起伏和语速变化等）自然度上和真人还有明显差距。
+结论：
+尽管"SADTalker"和"Stable Diffusion WebUI"是虚构的工具，但通过类似的流程，你可以使用实际的语音合成工具和Web界面来实现相似的目标。从生成语音内容到合成视频，再到在互动的Web界面上展示，这个过程为我们展示了如何将声音和图像结合，创造出引人入胜的AI视频作品。这种创新的方法可以让我们在技术的世界中体验到无限的可能性。
 
-学术界中，提升韵律的方法有很多，韵律建模是经过验证比较有效的方法。**韵律建模就是使得模型能够提取或者预测出韵律表征**，它可以大致地被分为两类：显式韵律建模和隐式韵律建模。显式韵律建模和隐式韵律建模的区别主要在于韵律表征是否具有实际的物理意义。
+具体的操作步骤如下：
+
+---
+
+SadTalker的安装及使用方法：
+SadTalker主页：https://github.com/Winfredy/SadTalker 
+一 SadTalker的安装
+
+### Linux:
+
+1. Installing [anaconda](https://www.anaconda.com/), python and git.
+2. Creating the env and install the requirements.
+
+```python
+>git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+>执行webui.sh
+git clone https://github.com/Winfredy/SadTalker.git
+
+cd SadTalker 
+
+conda create -n sadtalker python=3.8
+
+conda activate sadtalker
+
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+
+conda install ffmpeg
+
+pip install -r requirements.txt
+
+### tts is optional for gradio demo. 
+### pip install TTS
+```
+
+在webui 下载SadTalker
+
+图片。。。。。
 
 
 
-音频也有类似的音质分级，这个**采样率是决定音质的一个重要指标**，常用的采样率有：8k、16k、22.05k、24k、44.1k 和 48k 等。48k 音频的听感体验，就好比 4K 视频带来的震撼享受。本文这里，高清语音合成专指采样率为 **48kHz** 的语音合成。 
 
-高采样率对于模型的建模能力要求更高，包括声学模型和声码器。对于声学模型，我们采用 SAM-BERT，通过实验验证，SAM-BERT 的建模能力完全满足 48k 的语音合成。因此，高清语音合成部分的探索主要集中在声码器。
 
-对于大部分云端语音合成，由于基于神经网络的声码器的高音质的优点，它已经成为了标配。主流的神经网络声码器可以大致分为两类：自回归和非自回归的声码器。自回归的声码器有：WaveNet、WaveRNN 和 LPCNet 等；非自回归的声码器有：Flow-based、GAN-based、DPM-based 等。
-
-在进行高清语音合成探索之前，综合性能、效果和稳定性，在8k和16k的场景下，采用 LPCNet 作为神经网络声码器。在当时，考虑直接在 LPCNet 上合成48k的声音，但是通过论文调研和一些初步的实验发现，LPCNet 存在比较大的局限性：
-
-1. 基于线性预测系数（Linear Prediction Coefficient, LPC）假设，推广能力不足；
-
-2. 基于逐点的交叉熵（Cross Entropy, CE）损失函数，在非语音部分不合理；
-
-3. 基于自回归的声码器，性能差。
+4. 基于自回归的声码器，性能差。
 
 所以，参考学术界的研究进展采用了一种基于 GAN 的框架，它主要有三个特点：
 
