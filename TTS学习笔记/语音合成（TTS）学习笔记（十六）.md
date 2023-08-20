@@ -12,7 +12,7 @@
 
 |      |                             合成                             |                input image                 |
 | :--: | :----------------------------------------------------------: | :----------------------------------------: |
-|      | <video  src="https://github.com/alin995/speech_synthesis/blob/main/img/my.mp4" type="video/mp4"> </video> | <img src='/img/image-Wwl.png' width='380'> |
+|      | <video  src="/img/my.mp4" type="video/mp4"> </video> | <img src='/img/Wwl.png' width='380'> |
 
 
 
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
 在webui 下载SadTalker
 
-![image-20230818164126903](/Users/wangwenlin/Desktop/img/searchhttp.png)
+<img aligin="center" src="/img/searchhttp.png" />
 
 
 
@@ -83,14 +83,14 @@ stable diffusion项目的汉化插件就在Extensions扩展里。我们选择Ext
 
 点击 extensions >> installed,查看我们是否成功的安装了插件，选择我们刚刚下载的的stable-diffusion-webui-localization-zh_CN汉化插件，点击apply and restart UI,这里我们就成功安装了汉化插件。
 
-![image-20230818145116845](/Users/wangwenlin/Desktop/img/anzhuang.png)
+<img aligin="center" src="/img/anzhuang.png" />
 
 2.设置插件
 我们需要选择setting>>user interface>>localization，选择zh_CN
 
 点击apply settings即可，这里由于汉化设置需要重启UI界面，我们可以直接点击reload UI界面
 
-![image-20230818145314195](/Users/wangwenlin/Desktop/img/setting.png)
+<img aligin="center" src="/img/setting.png" />
 
 重启后，汉化完成了！！！
 
