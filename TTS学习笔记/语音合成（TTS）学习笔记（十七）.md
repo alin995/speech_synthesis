@@ -112,6 +112,22 @@ load_file("new_model.safetensors")
 
 Safetensors API适用于Pytorch、Tensorflow、PaddlePaddle、Flax和Numpy，可以通过阅读Safetensors文档来了解它。
 
+---
+
+Checkpoint和safetensors是Stable Diffusion中常见的两种模型存储格式。
+
+
+Checkpoint
+
+Checkpoint是Tensorflow框架中常用的模型保存方式。它保存了模型的权重和优化器的状态，以便恢复训练。在Stable Diffusion中，Checkpoint格式的模型可以包含更多的训练信息，包括训练过程中的中间状态。这意味着Checkpoint格式的模型文件通常较大。
+
+Checkpoint格式的模型适合需要恢复训练的情况。它们有助于调整和优化模型，因为我们可以看到模型训练过程中的各种信息。
+
+safetensors
+
+safetensors是一种相对较新的模型存储格式，专门为Stable Diffusion模型设计。它的特点是可以存储大型模型，同时保持文件的小巧和快速加载。safetensors只保存模型的权重，而不包含优化器状态或其他信息。这意味着它通常用于模型的最终版本，当我们只关心模型的性能，而不需要了解训练过程中的详细信息时，这种格式是一个很好的选择。由于它的加载速度快，因此更适合实时应用，如在线服务。
+
+在选择模型的存储格式时，需要根据使用场景来决定。例如，如果你需要进行模型微调，或者需要在训练过程中获得详细的信息，Checkpoint可能是更好的选择。而对于那些仅需要快速加载和执行模型的场景，safetensors可能是更好的选择。
 
 
 ---
@@ -120,4 +136,4 @@ Safetensors API适用于Pytorch、Tensorflow、PaddlePaddle、Flax和Numpy，可
 
 > [safetensors的git地址](https://github.com/huggingface/safetensors) 
 >
-> [safetensors的huggingface地址](
+> [safetensors的huggingface地址]()
