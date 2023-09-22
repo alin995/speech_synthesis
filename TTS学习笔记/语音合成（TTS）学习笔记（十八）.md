@@ -45,6 +45,7 @@ print(response)
 ```
 
 ![image-20230922142929235](/Users/wangwenlin/Desktop/img/internlm.png)
+<img aligin="center" src="/img/internlm.png" />
 
 1、使用 LMDeploy 完成 InternLM 的一键部署。
 首先安装 LMDeploy:
@@ -81,7 +82,8 @@ print(tokenizer.decode(pred.cpu()[0], skip_special_tokens=True))
 
 ```
 
-![image-20230922142526160](/Users/wangwenlin/Desktop/img/baichuan.png)
+
+<img aligin="center" src="/img/baichuan.png" />
 
 
 
