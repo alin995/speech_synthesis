@@ -67,7 +67,7 @@ CLIP Image Search的模型可以通过微调进行高度定制化，使其适应
 
    - 服务器上部署CLIP-Image-Search通
 
-   - 下载代码 
+   - 下载代码 git clone https://huggingface.co/spaces/marcelcastrobr/CLIP-image-search
 
      ### 步骤一：设置环境
 
