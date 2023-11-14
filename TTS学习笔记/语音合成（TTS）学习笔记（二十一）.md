@@ -46,54 +46,13 @@ CLIP Image Search不仅仅局限于API调用，还可以用于构建图像搜索
 
 在微调阶段，CLIP Image Search根据特定任务的数据集进行微调，以进一步提高性能。例如，对于图像搜索任务，可以使用带有文本描述的图像对进行微调，使得模型更好地适应特定领域的语义。
 
-## 4. CLIP Image Search的优势和潜力
-
->1. **图像搜索：** CLIP的主要应用是图像搜索，用户可以通过输入自然语言描述或问题，实现对图像的搜索和检索。
->2. **跨模态任务：** CLIP可以应用于多种跨模态任务，如图像标注、文本到图像的生成等。
-
-### 4.1 跨模态学习
-
-CLIP的跨模态学习使得模型更具泛化能力，能够处理来自多个模态（文本和图像）的信息。这使得CLIP Image Search在不同应用场景下表现出色，从而提高了图像搜索的准确性和适用性。
-
-### 4.2 多语言支持
-
-由于CLIP能够处理文本，因此CLIP Image Search不仅仅局限于单一语言。它可以轻松地支持多语言搜索，为全球用户提供更友好的图像搜索体验。
-
-### 4.3 高度定制化
+## 4. CLIP Image Search增强
 
 CLIP Image Search的模型可以通过微调进行高度定制化，使其适应不同领域和任务。这为企业和研究机构提供了一个灵活的工具，可以根据特定需求进行调整。
 
 结论： CLIP Image Search代表了图像搜索技术的新时代，其跨模态学习和多语言支持为图像搜索任务带来了全新的可能性。随着这一技术的不断演进，我们可以期待在各个领域看到更加智能、高效的图像搜索系统的出现。
 
-   - 服务器上部署CLIP-Image-Search通
 
-   - 下载代码 git clone https://huggingface.co/spaces/marcelcastrobr/CLIP-image-search
-
-     ### 步骤一：设置环境
-
-     ```python
-     创建环境
-     
-     conda create -n CLIP-Image-Search python=3.10
-     
-     激活环境
-     
-     conda activate  CLIP-Image-Search
-     ```
-     
-     ### 步骤二：安装依赖
-     
-     ```python
-     cd /CLIP-Image-Search
-     
-     pip install  -r  requirements.txt
-     ```
-     
-     ### 步骤三：执行运行文件app.py
-     
-     ```python
-     python app.py
-     ```
 
 ### 应用场景：
 
