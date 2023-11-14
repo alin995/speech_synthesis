@@ -138,7 +138,7 @@ CLIP Image Search代表了图像搜索的未来发展方向，为我们提供了
 ## 参考资源
 
 - [huggingface在线演示](https://huggingface.co/spaces/marcelcastrobr/CLIP-image-search)
-- [huggingface地址](git clone https://huggingface.co/spaces/marcelcastrobr/CLIP-image-search/)
+- [huggingface地址](https://huggingface.co/spaces/marcelcastrobr/CLIP-image-search/)
 
 ---
 
